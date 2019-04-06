@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <!--   
+    <link rel="stylesheet" href="uikit.min.css" />
+    <script src="jquery.js"></script>
+    <script src="uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.xx.x/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+ -->   
+
+    <title>J.E. Portfolio</title>
+
+</head>
+
+<body style="background-color: rgb(193, 207, 236)">
+
+    <div class="container-fluid">
+
+        <!-- ################################################# NAVIGATION BAR BEGINS ########################################################## -->
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"> J.E. Portfolio </a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="About.html"> About</a>
+                    </li>
+                    <li>
+                        <a href="Page 1.html">Page 1</a>
+                    </li>
+                    <li class="active">
+                        <a href="Page 2.html">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="Page 3.html">Page 3</a>
+                    </li>
+                    <li>
+                        <a href="Misc.html">Misc.</a>
+                    </li>
+                    <li>
+                        <a href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-left" action="\action_page.php">
+                    <div class="input-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+
+                <form class="navbar-form navbar-right" action="\action_page.php">
+                    <button type="button" class="btn btn-navbar btn-success">
+                        <a href="SignUp.html">
+                            <b>Sign Up</b>
+                        </a>
+                    </button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="LogIn.html">
+                            <span class="glyphicon glyphicon-log-in"></span>Log In</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ################################################# NAVIGATION BAR ENDED ######################################################## -->
+
+
+        <br>
+        <br>
+        <br>
+
+        <h1 style="text-align: center; font-size: 50px;">Event Date Calculator App</h1>
+
+
+
+        <br>
+        <br>
+
+        <div style="text-align: center">
+
+            <h3> Calculate the days until your upcoming event or deadline</h3>
+            <p>Select or type the year, month, and day of your upcoming event or deadline</p>
+
+            <br>
+            
+            <input id="year" placeholder="Year" type="number"  min="2018" />
+            <br>
+            <br>
+            <input id="month"  placeholder="Month"  type="number"  min="1"  max="12" />
+            <br>
+            <br>
+            <input id="day"  placeholder="Day"  type="number"  min="1"  max="31" />
+            <br>
+            <br>
+
+            <p id="err_mess"> </p>
+
+            <br>
+
+            <button type="button" onclick="Duration()">Click</button>
+
+            <br>
+            <br>
+
+
+            <p id="total" style="font-size: 20px"></p>
+
+            <script>
+                function Duration() {
+
+
+                     var messg = document.getElementById("err_mess");
+                     messg.innerHTML = "";
+
+                     try{
+
+
+                    var year = Number(document.getElementById("year").value);
+                    var month = Number(document.getElementById("month").value);
+                    var day = Number(document.getElementById("day").value);
+
+                    var today = new Date();
+                    var futDat = new Date(year, month - 1, day);
+                    var futDat1 = new Date(futDat.getFullYear(), futDat.getMonth(), futDat.getDate());
+
+                    var bottom = (24 * 60 * 60 * 1000);
+                    var today_ms = today.getTime();
+                    var futDat1_ms = futDat1.getTime();
+
+                    // Calculates the difference between the two dates
+                    var dateDiff_ms = futDat1_ms - today_ms;
+
+                    var totalDays = Math.ceil(dateDiff_ms / bottom);
+
+                         var tody = new Date();
+                         var year1 = tody.getFullYear(); 
+                         var month1 = tody.getMonth();
+                         var day1 = tody.getDate();
+
+
+                        if (year == "") throw "<span style='color:red';>" + "Enter a number for 'Year'." + "</span>";      
+                        if (year < year1) throw "<span style='color:red';>" + "The number for 'Year' must be the same or greater than the current year." + "</span>";                  
+                        if (month == "") throw "<span style='color:red';>" +  "Enter a number for 'Month'." + "</span>";
+                       // if (month < month1+1) throw  "<span style='color:red';>" +  "The number for 'Month' must be the same or greater than the current month." + "</span>";
+                        if (month > 12) throw  "<span style='color:red';>" +  "The number for 'Month' cannot be greater than 12." + "</span>";
+                        if (day == "") throw "<span style='color:red';>" +  "Enter a number for 'Day'." + "</span>";
+                        if (day <= 0) throw  "<span style='color:red';>" +  "The number for 'Day' must be greater than zero." + "</span>";   
+                        if (day > 31) throw  "<span style='color:red';>" +  "The number for 'Day' cannot be greater than 31." + "</span>";                            
+                        if (day < day1 && month <= month1+1 && year == year1) throw  "<span style='color:red';>" +  "The number for your 'Month' and 'Day' must be greater than today's date." + "</span>";                 
+                
+
+
+                        else { document.getElementById("total").innerHTML = ('<br>' + 'You have '+"<span style='color:blue; font-size:27px;'>" + "<strong>" + totalDays + "</strong>" + '</span>'+
+                        ' day(s) left until your upcoming event.');}
+
+                     }
+
+                     catch (e) {
+
+                                 messg.innerHTML = e;
+                }
+
+                
+                }
+            </script>
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
