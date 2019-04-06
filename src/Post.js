@@ -10,7 +10,7 @@ class Post extends Component {
             <p><span style={{color:'purple', fontSize:'20px'}}><b>Description:</b></span> {this.props.post.body}</p>   
         </div> 
         : (
-            <div className='center'>Click on any tab above </div>
+            <div className='center'><span style={{color:'purple', fontSize:'20px'}}><b>Click on any tab above</b></span> </div>
         )
         return(
             <div className='container'>
