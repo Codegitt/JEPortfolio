@@ -13,7 +13,7 @@ class Post extends Component {
             <div className='center' style={{color:'purple', fontSize:'20px'}} ><b>Click on any tab above</b> </div>
         )
         return(
-            <div className='container'>
+            <div className='container'  style={{color:'purple', fontSize:'20px'}}>
            
                 {post}
             </div>
