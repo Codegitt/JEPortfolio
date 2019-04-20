@@ -1,5 +1,5 @@
 {
-  "main.css": "/JEPortfolio/static/css/main.35446aee.chunk.css",
+  "main.css": "/JEPortfolio/static/css/main.4560c398.chunk.css",
   "main.js": "/JEPortfolio/static/js/main.ca122dca.chunk.js",
   "main.js.map": "/JEPortfolio/static/js/main.ca122dca.chunk.js.map",
   "runtime~main.js": "/JEPortfolio/static/js/runtime~main.47ba7a44.js",
@@ -7,9 +7,9 @@
   "static/js/2.fa2d0cf4.chunk.js": "/JEPortfolio/static/js/2.fa2d0cf4.chunk.js",
   "static/js/2.fa2d0cf4.chunk.js.map": "/JEPortfolio/static/js/2.fa2d0cf4.chunk.js.map",
   "index.html": "/JEPortfolio/index.html",
-  "precache-manifest.ba3bf4a2579dea8cb75cd340d8a53b38.js": "/JEPortfolio/precache-manifest.ba3bf4a2579dea8cb75cd340d8a53b38.js",
+  "precache-manifest.8111e803aeabc0a7ddf920f774f61e2b.js": "/JEPortfolio/precache-manifest.8111e803aeabc0a7ddf920f774f61e2b.js",
   "service-worker.js": "/JEPortfolio/service-worker.js",
-  "static/css/main.35446aee.chunk.css.map": "/JEPortfolio/static/css/main.35446aee.chunk.css.map",
+  "static/css/main.4560c398.chunk.css.map": "/JEPortfolio/static/css/main.4560c398.chunk.css.map",
   "static/media/Navbar.css": "/JEPortfolio/static/media/Sky-overlook.6ed56934.jpg",
-  "static/media/Home.css": "/JEPortfolio/static/media/skyscraper1.6da75427.jpeg"
+  "static/media/Home.css": "/JEPortfolio/static/media/skyscrapers1.6da75427.jpeg"
 }
