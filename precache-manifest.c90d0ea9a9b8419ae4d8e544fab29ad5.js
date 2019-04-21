@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "6da75427acdea4540b3abb9c2fb73fd2",
-    "url": "/JEPortfolio/static/media/skyscrapers1.6da75427.jpeg"
+    "revision": "989067f4fdd4fccacc1558c8500238d7",
+    "url": "/JEPortfolio/static/media/Skyscrapers2.989067f4.jpg"
   },
   {
     "revision": "6ed56934724d60beaeb7937cd64f645d",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/JEPortfolio/static/js/runtime~main.47ba7a44.js"
   },
   {
-    "revision": "5ce108bd76b5a4c234ec",
+    "revision": "2cdaa4024fe5ea99d918",
     "url": "/JEPortfolio/static/js/main.ca122dca.chunk.js"
   },
   {
@@ -20,11 +20,11 @@ self.__precacheManifest = [
     "url": "/JEPortfolio/static/js/2.fa2d0cf4.chunk.js"
   },
   {
-    "revision": "5ce108bd76b5a4c234ec",
-    "url": "/JEPortfolio/static/css/main.4560c398.chunk.css"
+    "revision": "2cdaa4024fe5ea99d918",
+    "url": "/JEPortfolio/static/css/main.0c8c8ce4.chunk.css"
   },
   {
-    "revision": "65c2ddebe3a4ee476bfbfa1e20fba460",
+    "revision": "30f3a622b28bf9ded136c0414100b126",
     "url": "/JEPortfolio/index.html"
   }
 ];
